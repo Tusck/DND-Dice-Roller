@@ -5,6 +5,7 @@ This is my first program in my first language. All feedback welcome.
 
 To-Do:
 1. Optimize the code
-2. Add a GUI
+2. Learn more about DND dice rolling
+3. Add a GUI
     a. open to suggestions, just started learning tkinter
-3. Create an executable
+4. Create an executable
