@@ -1,8 +1,18 @@
 import random
 
-number_of_sides = input('How many sides does your dice have: ')
+while True:
+    number_of_sides = input('How many sides does your dice have: ')
+    try:
+        number_of_sides = int(number_of_sides)
+        if number_of_sides < 1:
+            print('Please choose a postive number')
+        else:
+            break
+    except:
+        print('Please choose a positive number')
+
 num_list = list()
-roll = 'y'
+
 while True:
     roll = input('Do you want to roll the dice, Y or N: ')
     roll = roll.lower()
@@ -11,12 +21,10 @@ while True:
         break
     elif roll != 'y':
         print("Choose Y or N")
-        continue
     else:
-        dice_roll = random.randint(1,int(number_of_sides))
+        dice_roll = random.randint(1,number_of_sides)
         print(dice_roll)
         num_list.append(dice_roll)
-
 
 x = sum(num_list)
 y = len(num_list)
