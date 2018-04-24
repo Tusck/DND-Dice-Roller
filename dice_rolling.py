@@ -11,7 +11,7 @@ while True:
     except:
         print('Please choose a positive number')
 
-num_list = list()
+num_list = []
 
 while True:
     roll = input('Do you want to roll the dice, Y or N: ')
@@ -26,9 +26,9 @@ while True:
         print(dice_roll)
         num_list.append(dice_roll)
 
-x = sum(num_list)
-y = len(num_list)
-if y > 0:
-    print("You rolled {} times".format(y))
-    print("Your total rolled was: {}".format(x))
-    print("Your average role was: " + str(x/y))
+total_roll = sum(num_list)
+num_rolls = len(num_list)
+if num_list:
+    print("You rolled {} times".format(num_rolls))
+    print("Your total rolled was: {}".format(total_roll))
+    print("Your average role was: {}".format(round(total_roll/num_rolls, 1)))
